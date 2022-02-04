@@ -1,4 +1,4 @@
-int i=1;
+int j=20;
 public void setup(){
   size(500,500);
   background(0);
@@ -7,13 +7,13 @@ public void draw(){
   sierpinski(50,450,450);
 }
 public void mouseClicked(){
-  i=-i;
+  j=(int)(Math.random()*450);
   fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
   background((int)(Math.random()*255));
 }
 public void sierpinski(int x, int y, int len){
-  if(len<=20){
-    triangle(x,y,x+i*len/2,y-i*len,x+i*len,y);
+  if(len<=j){
+    triangle(x,y,x+len/2,y-len,x+len,y);
   }
   else{
     sierpinski(x,y,len/2);

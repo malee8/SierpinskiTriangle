@@ -1,4 +1,4 @@
-int j=20;
+int j=450;
 public void setup(){
   size(500,500);
   background(0);
@@ -7,7 +7,12 @@ public void draw(){
   sierpinski(50,450,450);
 }
 public void mouseClicked(){
-  j=(int)(Math.random()*450);
+  if(j>10){
+    j=j/2;
+  }
+  else{
+    j=450;
+  }
   fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
   background((int)(Math.random()*255));
 }

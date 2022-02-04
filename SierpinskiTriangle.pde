@@ -7,7 +7,7 @@ public void draw(){
   sierpinski(50,450,450);
 }
 public void mouseClicked(){
-  if(j>10){
+  if(j>1){
     j=j/2;
   }
   else{
